@@ -14,6 +14,7 @@
 		170B0CBD1E7EB28300BC65B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 170B0CBB1E7EB28300BC65B6 /* LaunchScreen.storyboard */; };
 		170B0CC81E7EB28300BC65B6 /* PokemonCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170B0CC71E7EB28300BC65B6 /* PokemonCloneTests.swift */; };
 		170B0CD31E7EB28300BC65B6 /* PokemonCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170B0CD21E7EB28300BC65B6 /* PokemonCloneUITests.swift */; };
+		170B0CE21E7EB42F00BC65B6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170B0CE11E7EB42F00BC65B6 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		170B0CCE1E7EB28300BC65B6 /* PokemonCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemonCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		170B0CD21E7EB28300BC65B6 /* PokemonCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCloneUITests.swift; sourceTree = "<group>"; };
 		170B0CD41E7EB28300BC65B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		170B0CE11E7EB42F00BC65B6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				170B0CE21E7EB42F00BC65B6 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				170B0CC61E7EB28300BC65B6 /* PokemonCloneTests */,
 				170B0CD11E7EB28300BC65B6 /* PokemonCloneUITests */,
 				170B0CB01E7EB28300BC65B6 /* Products */,
+				170B0CE01E7EB42E00BC65B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +127,14 @@
 				170B0CD41E7EB28300BC65B6 /* Info.plist */,
 			);
 			path = PokemonCloneUITests;
+			sourceTree = "<group>";
+		};
+		170B0CE01E7EB42E00BC65B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				170B0CE11E7EB42F00BC65B6 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
