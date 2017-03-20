@@ -12,7 +12,6 @@ import MapKit
 class ViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
-    
     let manager = CLLocationManager()
     var updateCount = 0
     
@@ -32,6 +31,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     
+    // This method is run once the user has authorised this app to use location services.
+    // updateCount keeps track of location updates. The user will now be able to view surrounding areas on the map without constantly snapping back to the users current location.
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if updateCount < 3 {
         
@@ -43,6 +44,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             manager.stopUpdatingLocation()
         }
     }
+    
 
     // If the current location dot goes off screen, clicking the compass image will recenter the current location dot on screen.
     @IBAction func centerTapped(_ sender: Any) {
