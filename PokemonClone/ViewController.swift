@@ -38,14 +38,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let region = MKCoordinateRegionMakeWithDistance(manager.location!.coordinate, 400, 400)
         mapView.setRegion(region, animated: false)
         updateCount += 1
-            
         } else {
             // Not necessary but it saves battery life
             manager.stopUpdatingLocation()
         }
     }
 
-    // If the current location dot goes off screen, clicking this button will center the current location dot on screen.
+    // If the current location dot goes off screen, clicking the compass image will recenter the current location dot on screen.
     @IBAction func centerTapped(_ sender: Any) {
         
         if let coord = manager.location?.coordinate {
