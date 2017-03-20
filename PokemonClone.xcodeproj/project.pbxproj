@@ -15,6 +15,9 @@
 		170B0CC81E7EB28300BC65B6 /* PokemonCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170B0CC71E7EB28300BC65B6 /* PokemonCloneTests.swift */; };
 		170B0CD31E7EB28300BC65B6 /* PokemonCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170B0CD21E7EB28300BC65B6 /* PokemonCloneUITests.swift */; };
 		170B0CE21E7EB42F00BC65B6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170B0CE11E7EB42F00BC65B6 /* MapKit.framework */; };
+		177F68021E80643A00A18A75 /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177F68011E80643A00A18A75 /* PokedexViewController.swift */; };
+		177F68051E80668800A18A75 /* Pokemon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 177F68031E80668800A18A75 /* Pokemon.xcdatamodeld */; };
+		177F68071E80676400A18A75 /* CoreDataHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177F68061E80676400A18A75 /* CoreDataHelp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		170B0CD21E7EB28300BC65B6 /* PokemonCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCloneUITests.swift; sourceTree = "<group>"; };
 		170B0CD41E7EB28300BC65B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		170B0CE11E7EB42F00BC65B6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		177F68011E80643A00A18A75 /* PokedexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
+		177F68041E80668800A18A75 /* Pokemon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pokemon.xcdatamodel; sourceTree = "<group>"; };
+		177F68061E80676400A18A75 /* CoreDataHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +109,13 @@
 			children = (
 				170B0CB21E7EB28300BC65B6 /* AppDelegate.swift */,
 				170B0CB41E7EB28300BC65B6 /* ViewController.swift */,
+				177F68011E80643A00A18A75 /* PokedexViewController.swift */,
+				177F68061E80676400A18A75 /* CoreDataHelp.swift */,
 				170B0CB61E7EB28300BC65B6 /* Main.storyboard */,
 				170B0CB91E7EB28300BC65B6 /* Assets.xcassets */,
 				170B0CBB1E7EB28300BC65B6 /* LaunchScreen.storyboard */,
 				170B0CBE1E7EB28300BC65B6 /* Info.plist */,
+				177F68031E80668800A18A75 /* Pokemon.xcdatamodeld */,
 			);
 			path = PokemonClone;
 			sourceTree = "<group>";
@@ -274,7 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				177F68021E80643A00A18A75 /* PokedexViewController.swift in Sources */,
+				177F68051E80668800A18A75 /* Pokemon.xcdatamodeld in Sources */,
 				170B0CB51E7EB28300BC65B6 /* ViewController.swift in Sources */,
+				177F68071E80676400A18A75 /* CoreDataHelp.swift in Sources */,
 				170B0CB31E7EB28300BC65B6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,6 +557,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		177F68031E80668800A18A75 /* Pokemon.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				177F68041E80668800A18A75 /* Pokemon.xcdatamodel */,
+			);
+			currentVersion = 177F68041E80668800A18A75 /* Pokemon.xcdatamodel */;
+			path = Pokemon.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 170B0CA71E7EB28300BC65B6 /* Project object */;
 }

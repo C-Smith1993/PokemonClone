@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
-
+    
     @IBOutlet weak var mapView: MKMapView!
     let manager = CLLocationManager()
     var updateCount = 0
@@ -20,11 +20,27 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        addAllPokemon()
+        
         manager.delegate = self
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             mapView.showsUserLocation = true
             manager.startUpdatingLocation()
+            
+            Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { (timer) in
+                // Randomly spawn a Pokemon
+                
+                if let coord = self.manager.location?.coordinate {
+                    let annotation = MKPointAnnotation()
+                    annotation.coordinate = coord
+                    let randomLat = (Double(arc4random_uniform(200)) - 100.0) / 50000.0
+                    let randomLong = (Double (arc4random_uniform(200)) - 100.0) / 50000.0
+                    annotation.coordinate.latitude += randomLat
+                    annotation.coordinate.longitude += randomLong
+                    self.mapView.addAnnotation(annotation)
+                }
+            })
         } else {
             manager.requestWhenInUseAuthorization()
         }
@@ -35,24 +51,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     // updateCount keeps track of location updates. The user will now be able to view surrounding areas on the map without constantly snapping back to the users current location.
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if updateCount < 3 {
-        
-        let region = MKCoordinateRegionMakeWithDistance(manager.location!.coordinate, 400, 400)
-        mapView.setRegion(region, animated: false)
-        updateCount += 1
+            
+            let region = MKCoordinateRegionMakeWithDistance(manager.location!.coordinate, 200, 200)
+            mapView.setRegion(region, animated: false)
+            updateCount += 1
         } else {
             // Not necessary but it saves battery life
             manager.stopUpdatingLocation()
         }
     }
     
-
+    
     // If the current location dot goes off screen, clicking the compass image will recenter the current location dot on screen.
     @IBAction func centerTapped(_ sender: Any) {
         
         if let coord = manager.location?.coordinate {
-        let region = MKCoordinateRegionMakeWithDistance(coord, 400, 400)
-        mapView.setRegion(region, animated: true)
-    }
+            let region = MKCoordinateRegionMakeWithDistance(coord, 200, 200)
+            mapView.setRegion(region, animated: true)
+        }
     }
     
     
