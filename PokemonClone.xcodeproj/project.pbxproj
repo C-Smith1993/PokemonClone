@@ -524,6 +524,7 @@
 				170B0CD91E7EB28300BC65B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		170B0CDA1E7EB28300BC65B6 /* Build configuration list for PBXNativeTarget "PokemonCloneTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +533,7 @@
 				170B0CDC1E7EB28300BC65B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		170B0CDD1E7EB28300BC65B6 /* Build configuration list for PBXNativeTarget "PokemonCloneUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +542,7 @@
 				170B0CDF1E7EB28300BC65B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
