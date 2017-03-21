@@ -15,9 +15,12 @@ func addAllPokemon() {
     createPokemon(name: "Meowth", imageName: "meowth")
     createPokemon(name: "Pikachu", imageName: "pikachu-2")
     createPokemon(name: "Bullbasaur", imageName: "bullbasaur")
+    createPokemon(name: "Charmander", imageName: "charmander")
+    createPokemon(name: "Snorlax", imageName: "snorlax")
+    createPokemon(name: "Zubat", imageName: "zubat")
+    createPokemon(name: "Squirtle", imageName: "squirtle")
     
     (UIApplication.shared.delegate as! AppDelegate).saveContext()
-    
 }
 
 
@@ -35,12 +38,10 @@ func getAllPokemon() -> [Pokemon] {
     
     do {
         let pokemons = try context.fetch(Pokemon.fetchRequest()) as! [Pokemon]
-        
         if pokemons.count == 0 {
             addAllPokemon()
             return getAllPokemon()
         }
-        
         return pokemons
     } catch {}
     return []
